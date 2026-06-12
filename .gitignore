@@ -1,0 +1,10 @@
+# Ignore everything
+*
+
+# Don't ignore folders
+!*/
+
+# Keep these files
+!resume.tex
+!resume.pdf
+!.gitignore
