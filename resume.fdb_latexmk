@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1781255324.10308 "d:/Resume/resume.tex" "resume.pdf" "resume" 1781255325.32151 0
+["pdflatex"] 1781255800.15234 "d:/Resume/resume.tex" "resume.pdf" "resume" 1781255800.95564 0
   "C:/Users/kushp/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1781254775 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/kushp/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1781254235 13333487 a741a7f0f82e4524a78001aabd8b1def ""
   "C:/Users/kushp/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -94,10 +94,10 @@
   "C:/Users/kushp/AppData/Local/Programs/MiKTeX/tex/latex/tools/verbatim.sty" 1761901070 7532 26d26e9d8f2ca784270d5da8ec7d102b ""
   "C:/Users/kushp/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/kushp/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "d:/Resume/resume.tex" 1781255315 6711 8e032cf9c7685652c1e0f429e8adc2e1 ""
-  "resume.aux" 1781255325 911 5ebc521db69d0763d921c3d20bc66580 "pdflatex"
-  "resume.out" 1781255325 503 725edd5935f3993dfc7ce428e24d0c22 "pdflatex"
-  "resume.tex" 1781255315 6711 8e032cf9c7685652c1e0f429e8adc2e1 ""
+  "d:/Resume/resume.tex" 1781255798 6711 8e032cf9c7685652c1e0f429e8adc2e1 ""
+  "resume.aux" 1781255800 911 5ebc521db69d0763d921c3d20bc66580 "pdflatex"
+  "resume.out" 1781255800 503 725edd5935f3993dfc7ce428e24d0c22 "pdflatex"
+  "resume.tex" 1781255798 6711 8e032cf9c7685652c1e0f429e8adc2e1 ""
   (generated)
   "resume.aux"
   "resume.log"
