@@ -1,215 +1,184 @@
-\documentclass[letterpaper,11pt]{article}
+
+%-------------------------------------------------------------
+% Kushagra Petwal - Resume (ATS-optimized, Google XYZ bullets)
+% Compile with: pdflatex Kushagra_Petwal_Resume.tex
+%-------------------------------------------------------------
+\documentclass[letterpaper,10pt]{article}
 
 \usepackage[T1]{fontenc}
 \usepackage[scaled=0.92]{helvet}
 \renewcommand{\familydefault}{\sfdefault}
 
-\usepackage{latexsym}
-\usepackage[empty]{fullpage}
-\usepackage{titlesec}
-\usepackage[usenames,dvipsnames]{color}
+\usepackage[letterpaper,top=0.4in,bottom=0.35in,left=0.55in,right=0.55in]{geometry}
+\usepackage{microtype}
 \usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks,
+  pdftitle={Kushagra Petwal - Resume},
+  pdfauthor={Kushagra Petwal},
+  pdfsubject={Embedded Systems and Firmware Engineer Resume}]{hyperref}
+\input{glyphtounicode}
+\pdfgentounicode=1
 
 \definecolor{AccentColor}{RGB}{0,32,96}
 
-\usepackage{verbatim}
-\usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
-\usepackage{fancyhdr}
-\usepackage[english]{babel}
-\usepackage{tabularx}
-\input{glyphtounicode}
-
-\pagestyle{fancy}
-\fancyhf{}
-\fancyfoot{}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
-
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.7in}
-\addtolength{\evensidemargin}{-0.7in}
-\addtolength{\textwidth}{1.4in}
-\addtolength{\topmargin}{-.7in}
-\addtolength{\textheight}{1.4in}
-
-\urlstyle{same}
-\raggedbottom
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{2em}
 \raggedright
-\setlength{\tabcolsep}{0in}
+\urlstyle{same}
 
-\titleformat{\section}
-  {\color{AccentColor}\vspace{-4pt}\scshape\raggedright\large}
-  {}{0em}{}[\color{AccentColor}\titlerule \vspace{-5pt}]
+% ---------- Section headings ----------
+\titleformat{\section}[block]
+  {\color{AccentColor}\bfseries\normalsize\raggedright}
+  {}{0em}
+  {\MakeUppercase}
+  [{\vspace{0.5pt}\color{AccentColor}\titlerule[0.6pt]}]
+\titlespacing*{\section}{0pt}{7pt}{1pt}
 
-\pdfgentounicode=1
-\titlespacing*{\section}{0pt}{4pt plus 1pt minus 1pt}{10pt plus 1pt minus 1pt}
-
-% Custom commands
-\newcommand{\resumeItem}[1]{\item\small{#1\vspace{-2pt}}}
-
-\newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
-  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-    \textbf{#1} & #2 \\
-    \textit{\small#3} & \textit{\small #4} \\
-  \end{tabular*}\vspace{-7pt}
+% ---------- Bullet lists ----------
+\setlist[itemize]{
+    leftmargin=1.1em,
+    labelsep=0.5em,
+    itemsep=1pt,
+    parsep=0pt,
+    topsep=1.5pt,
+    partopsep=0pt,
+    label=\textbullet
 }
 
-\newcommand{\resumeProjectHeading}[2]{
-  \item
-  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-    \small#1 & #2
-  \end{tabular*}\vspace{-7pt}
-}
+% ---------- Entry helpers ----------
+% \entryhead{bold left}{right}{italic left}{italic right}
+\newcommand{\entryhead}[4]{%
+  \addvspace{3pt}%
+  \noindent\textbf{#1}\hfill #2\par\nobreak
+  \noindent{\small\textit{#3}}\hfill{\small\textit{#4}}\par\nobreak
+  \vspace{1pt}}
 
-\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+% \projhead{project name}{tech stack}{right}
+\newcommand{\projhead}[3]{%
+  \addvspace{3pt}%
+  \noindent\textbf{#1} ~|~ {\small\textit{#2}}\hfill #3\par\nobreak
+  \vspace{1pt}}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*,itemsep=0pt,topsep=2pt]}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+% \entryline{bold}{italic}{right}
+\newcommand{\entryline}[3]{%
+  \addvspace{3pt}%
+  \noindent\textbf{#1}, \textit{#2}\hfill #3\par\nobreak
+  \vspace{1pt}}
 
-%-------------------------------------------
-% RESUME STARTS HERE
-%-------------------------------------------
+% \skillline{category}{keywords}
+\newcommand{\skillline}[2]{%
+  \par\hangindent=1.1em\noindent\textbf{#1:} #2\par\vspace{1.2pt}}
 
 \begin{document}
 
-%----------HEADING----------
+%---------- HEADING ----------
 \begin{center}
-    {\Huge \scshape \textcolor{AccentColor}{\textbf{Kushagra Petwal}}} \\ \vspace{1pt}
-    \small
-    \href{mailto:kushpetwal13@gmail.com}{kushpetwal13@gmail.com} $|$
-    \href{https://www.linkedin.com/in/kushagra-petwal-66b537224/}{LinkedIn} $|$
-    \href{https://github.com/KAVATER}{github.com/KAVATER} $|$
-    \href{tel:+918650110088}{(+91) 8650110088}
+  {\huge\bfseries\color{AccentColor} Kushagra Petwal}\\[3pt]
+  {\small Pantnagar, Uttarakhand, India ~|~
+  \href{mailto:kushpetwal13@gmail.com}{kushpetwal13@gmail.com} ~|~
+  \href{tel:+918650110088}{+91 8650110088}}\\[1pt]
+  {\small
+  \href{https://www.linkedin.com/in/kushagra-petwal-66b537224/}{linkedin.com/in/kushagra-petwal-66b537224} ~|~
+  \href{https://github.com/KAVATER}{github.com/KAVATER}}
 \end{center}
+\vspace{-10pt}
 
-%-----------SKILLS-----------
-\section{Skills}
-\begin{itemize}[leftmargin=0.15in, label={}]
-\small{\item{
-\textbf{Languages}: Embedded C, Java, FreeRTOS \\
-\textbf{Embedded Platforms}: STM32, ESP32 \\
-\textbf{Protocols}: UART, SPI, I2C, MQTT, CAN \\
-\textbf{GUI / Tools}: TouchGFX, LVGL, Fusion 360, PrusaSlicer \\
-\textbf{Other}: Buildroot, ARM Cortex-M/A, GNU Make, PID Control, Kalman Filter
-}}
-\end{itemize}
-
-%-----------EDUCATION-----------
+%---------- EDUCATION ----------
 \section{Education}
-\resumeSubHeadingListStart
+\entryhead
+  {G. B. Pant University of Agriculture and Technology}{2027}
+  {Bachelor of Technology (B.Tech) in Electronics and Communication Engineering}
+  {Pantnagar, Uttarakhand, India}
 
-  \resumeSubheading
-    {G. B. Pant University of Agriculture and Technology}{2027}
-    {B.Tech Final Year, Electronics and Communication Engineering}{Pantnagar, Uttarakhand}
+\entryhead
+  {St. Thomas' College}{}
+  {Class XII: 80\% \quad | \quad Class X: 89\%}
+  {Dehradun, Uttarakhand, India}
 
-\resumeSubHeadingListEnd
-
-%-----------EXPERIENCE-----------
-\section{Experience}
-\resumeSubHeadingListStart
-
-  \resumeSubheading
-    {Embedded Software Intern}{July 2026 -- September 2026}
-    {\textbf{Sunfox - }\href{https://github.com/KAVATER/SUNFOX-2026-Projects}{\textbf{GitHub Link}}}
-    {Dehradun, Uttarakhand}
-
-    \resumeItemListStart
-      \resumeItem{Designed an FIR filter in MATLAB and deployed it with ARM CMSIS-DSP, using FFT-based processing for ECG signal data and filter coefficients.\href{https://github.com/KAVATER/SUNFOX-2026-Projects} {\textbf{GitHub Link}}}
-      \resumeItem{Developed Zephyr RTOS firmware for an nRF52840-based ECG device, increasing the sampling rate from 100 SPS to 600 SPS (6X) by enabling Bluetooth LE 2M PHY and optimizing the codebase.}
-      \resumeItem{Implemented real-time ECG waveform rendering on a 2.4-inch TFT display using 8-bit fonts and a sliding-window graph mapped from display pixels to a circular buffer for low-flicker visualization.}
-      \resumeItem{Configured the STM32WB55 as a BLE Central using the STM32 Wireless SDK, enabling device scanning, connection establishment, and command-triggered GATT notifications.}
-      \resumeItem{Configured the STM32WB55 as a BLE Peripheral with multi-device connectivity for simultaneous ECG data transmission and GATT notifications.}
-    \resumeItemListEnd
-
-\resumeSubHeadingListEnd
-
-  \resumeSubheading
-    {  Embedded Intern}{July 2025 -- September 2025}
-    {\textbf{Sunfox - }\href{https://github.com/KAVATER/Sunfox-Projects/tree/main/HeartRate\%20and\%20Spo2-2/Core/Src}{GitHub Link}}
-    {Dehradun, Uttarakhand}
-
-    \resumeItemListStart
-      \resumeItem{Developed AFE4490 breakout-board drivers and algorithms for SpO2 and heart-rate monitoring.}
-      \resumeItem{Applied FIR high-pass filters to remove baseline drift from the SpO2 signal.}
-      \resumeItem{Built a custom USB protocol analyzer as a cost-effective alternative to commercial tools.}
-      \resumeItem{Implemented a Kalman filter for MPU6050 and analyzed the effect of motion on SpO2 signals using the Discovery Board accelerometer.}
-    \resumeItemListEnd
-
-
-%-----------PROJECTS-----------
-\section{Projects}
-\resumeSubHeadingListStart
-
-  \resumeProjectHeading
-    {\textbf{Drone Firmware - }\href{https://github.com/lab685/ESP32-Drone}{GitHub Link}}{2025}
-    \resumeItemListStart
-      \resumeItem{Built an ESP32-based flight controller using the Arduino framework.}
-      \resumeItem{Implemented a real-time PID controller with an MPU6050 IMU over I2C.}
-      \resumeItem{Implemented a Kalman filter for improved motion estimation.}
-    \resumeItemListEnd
-
-  \vspace{-2pt}
-
-  \resumeProjectHeading
-    {\textbf{Custom Embedded Linux for PocketBeagle 2} | Buildroot, Embedded Linux, OP-TEE, ARM}{2026}
-    \resumeItemListStart
-      \resumeItem{Built a custom Embedded Linux distribution for PocketBeagle 2 using Buildroot.}
-      \resumeItem{Configured the bootloader, Linux kernel, root filesystem, and cross-compilation toolchain for an ARM-based platform.}
-      \resumeItem{Integrated OP-TEE and configured device tree and peripheral drivers for secure embedded execution.}
-    \resumeItemListEnd
-
-  \vspace{-2pt}
-
-  \resumeProjectHeading
-    {\textbf{Battle Bot} | Fusion 360, PrusaSlicer, Pico SDK}{2026}
-    \resumeItemListStart
-      \resumeItem{Designed and developed a 3D-printed battle bot using Fusion 360 and fabricated components using the Prusa MK4 3D printer.}
-      \resumeItem{Developed firmware using the Pico SDK, decoded FlySky transmitter inputs, and implemented watchdog-based fail-safe mechanisms for reliable operation.}
-    \resumeItemListEnd
-
-\resumeSubHeadingListEnd
-
-%-----------LEADERSHIP-----------
-\section{Leadership}
-\resumeSubHeadingListStart
-
-  \resumeSubheading
-    {President}{}
-    {The Robotics Club, Pantnagar}{}
-    \resumeItemListStart
-      \resumeItem{Organized a bot-building workshop for 100+ first-year students.}
-      \resumeItem{Mentored and supervised bot-building competitions.}
-    \resumeItemListEnd
-
-  \resumeSubheading
-    {Member}{}
-    {Vimarsh: The Oratory Club, Pantnagar}{}
-    \resumeItemListStart
-      \resumeItem{Organized and participated in multiple university-level debate competitions.}
-    \resumeItemListEnd
-
-\resumeSubHeadingListEnd
-
-%-----------AWARDS-----------
-\section{Awards}
-\begin{itemize}[leftmargin=0.15in, label={}]
-\small{
-\item{
-\textbf{2nd Runner-Up, Battle Bot Competition} \hfill 2026\\
-Secured 3rd place in the Beetleweight category at the Robo War competition organized by IIT BHU.
-}
-
-\vspace{-5pt}
-
-\item{
-\textbf{Runner-Up, Maze Solving Competition} \hfill 2024\\
-Secured 2nd place in the maze-solving event organized by The Robotics Club, Pantnagar during first year.
-}
-}
+%---------- WORK EXPERIENCE ----------
+\section{Work Experience}
+\entryhead
+  {Embedded Software Intern}{Jul 2026 -- Sep 2026}
+  {Sunfox, Dehradun, Uttarakhand, India}{\href{https://github.com/KAVATER/SUNFOX-2026-Projects}{github.com/KAVATER/SUNFOX-2026-Projects}}
+\begin{itemize}
+  \item Increased ECG sampling throughput 6x (100 to 600 samples per second, SPS) on an nRF52840-based ECG device by developing Zephyr RTOS firmware, enabling Bluetooth Low Energy (BLE) 2M PHY, and optimizing the codebase.
+  \item Designed a Finite Impulse Response (FIR) filter in MATLAB and deployed it with ARM CMSIS-DSP, using FFT-based processing of ECG signal data and filter coefficients.
+  % XYZ-TODO: add result, e.g. noise reduction in dB, filter order/cutoff, or cycles per sample
+  \item Delivered low-flicker, real-time ECG waveform rendering on a 2.4-inch TFT display using 8-bit fonts and a sliding-window graph that maps display pixels to a circular buffer.
+  % XYZ-TODO: add frame rate / refresh rate
+  \item Configured the STM32WB55 as a BLE Central (scanning, connection establishment, command-triggered GATT notifications) via the STM32 Wireless SDK, and as a BLE Peripheral with multi-device connectivity for ECG data transmission.
+  % XYZ-TODO: add number of simultaneous connections
 \end{itemize}
+
+\entryhead
+  {Embedded Intern}{Jul 2025 -- Sep 2025}
+  {Sunfox, Dehradun, Uttarakhand, India}{\href{https://github.com/KAVATER/Sunfox-Projects/tree/main/HeartRate\%20and\%20Spo2-2/Core/Src}{github.com/KAVATER/Sunfox-Projects}}
+\begin{itemize}
+  \item Developed AFE4490 analog front-end breakout-board drivers and algorithms for SpO2 and heart-rate monitoring.
+  \item Removed baseline drift from the SpO2 signal by applying FIR high-pass filters.
+  \item Built a custom USB protocol analyzer as a cost-effective alternative to commercial tools.
+  % XYZ-TODO: add cost saved (INR) or supported protocols/sample rate
+  \item Implemented a Kalman filter for the MPU6050 inertial measurement unit (IMU) and used the Discovery Board accelerometer to analyze the effect of motion on SpO2 signals.
+\end{itemize}
+
+%---------- PROJECTS ----------
+\section{Projects}
+\projhead
+  {Drone Firmware}{ESP32, Arduino, I2C, PID, Kalman Filter}{\href{https://github.com/lab685/ESP32-Drone}{github.com/lab685/ESP32-Drone} ~|~ 2025}
+\begin{itemize}
+  \item Built an ESP32-based drone flight controller on the Arduino framework with a real-time PID loop and MPU6050 IMU over I2C.
+  \item Improved motion estimation by implementing a Kalman filter on IMU data.
+  % XYZ-TODO: add control-loop rate (Hz) or stability result
+\end{itemize}
+
+\projhead
+  {Custom Embedded Linux for PocketBeagle 2}{Buildroot, OP-TEE, ARM}{2026}
+\begin{itemize}
+  \item Built a custom embedded Linux distribution for the PocketBeagle 2 using Buildroot, configuring the bootloader, Linux kernel, root filesystem, and cross-compilation toolchain for an ARM-based platform.
+  \item Integrated OP-TEE (Open Portable Trusted Execution Environment) and configured the device tree and peripheral drivers to enable secure embedded execution.
+  % XYZ-TODO: add boot time / image size / repo link
+\end{itemize}
+
+\projhead
+  {Battle Bot}{Fusion 360, PrusaSlicer, Pico SDK}{2026}
+\begin{itemize}
+  \item Designed a 3D-printed battle bot in Fusion 360 and fabricated its components on a Prusa MK4 3D printer; placed 3rd in the Beetleweight category at Robo War, IIT BHU.
+  \item Developed Pico SDK firmware that decodes FlySky transmitter inputs and implements watchdog-based fail-safe mechanisms.
+\end{itemize}
+
+%---------- TECHNICAL SKILLS ----------
+\section{Technical Skills}
+\vspace{1pt}
+\skillline{Languages}{C (Embedded C), Java, MATLAB}
+\skillline{Platforms}{STM32 , ESP32, Nordic nRF52840,NXP, PocketBeagle 2, ARM Cortex-M/A}
+\skillline{RTOS and Embedded Linux}{Zephyr RTOS, FreeRTOS, Buildroot}
+\skillline{Protocols and Wireless}{Bluetooth Low Energy (BLE), GATT, UART, SPI, I2C, CAN, USB, MQTT}
+\skillline{Signal Processing and Control}{FIR Filters, FFT, ARM CMSIS-DSP, Kalman Filter, PID Control}
+\skillline{GUI and Tools}{TouchGFX, LVGL, STM32 Wireless SDK, Pico SDK, GNU Make, Git, Fusion 360, PrusaSlicer}
+
+%---------- LEADERSHIP ----------
+\section{Leadership}
+\entryline{ChairPerson}{The Robotics Club, Pantnagar}{}% XYZ-TODO: add years held
+\begin{itemize}
+  \item Organized a bot-building workshop for 100+ first-year students; mentored and supervised bot-building competitions.
+  % XYZ-TODO: add number of teams / events
+\end{itemize}
+
+\entryline{Member}{Vimarsh: The Oratory Club, Pantnagar}{}% XYZ-TODO: add years
+\begin{itemize}
+  \item Organized and participated in multiple university-level debate competitions.
+\end{itemize}
+
+% %---------- AWARDS ----------
+% \section{Awards}
+% \vspace{2.5pt}
+% \begin{itemize}
+%   \item \textbf{3rd Place (Second Runner-Up), Beetleweight Battle Bot Competition}, Robo War, IIT BHU \hfill 2026
+%   \item \textbf{Runner-Up (2nd Place), Maze Solving Competition}, The Robotics Club, Pantnagar \hfill 2024
+% \end{itemize}
 
 \end{document}
