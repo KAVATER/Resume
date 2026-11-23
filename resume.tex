@@ -10,8 +10,7 @@
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{xcolor}
 
-% Define your accent color here:
-\definecolor{AccentColor}{RGB}{0, 32, 96}
+\definecolor{AccentColor}{RGB}{0,32,96}
 
 \usepackage{verbatim}
 \usepackage{enumitem}
@@ -46,7 +45,6 @@
 \pdfgentounicode=1
 \titlespacing*{\section}{0pt}{4pt plus 1pt minus 1pt}{10pt plus 1pt minus 1pt}
 
-%-------------------------
 % Custom commands
 \newcommand{\resumeItem}[1]{\item\small{#1\vspace{-2pt}}}
 
@@ -73,7 +71,8 @@
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 %-------------------------------------------
-%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% RESUME STARTS HERE
+%-------------------------------------------
 
 \begin{document}
 
@@ -84,16 +83,15 @@
     \href{mailto:kushpetwal13@gmail.com}{kushpetwal13@gmail.com} $|$
     \href{https://www.linkedin.com/in/kushagra-petwal-66b537224/}{LinkedIn} $|$
     \href{https://github.com/KAVATER}{github.com/KAVATER} $|$
-    \href{(+91) 8650110088}{(+91) 8650110088}
-    
+    \href{tel:+918650110088}{(+91) 8650110088}
 \end{center}
 
 %-----------SKILLS-----------
 \section{Skills}
 \begin{itemize}[leftmargin=0.15in, label={}]
 \small{\item{
-\textbf{Languages}: Embedded C, Java, FreeRtos \\
-\textbf{Embedded Platforms}: STM32,ESP32 \\
+\textbf{Languages}: Embedded C, Java, FreeRTOS \\
+\textbf{Embedded Platforms}: STM32, ESP32 \\
 \textbf{Protocols}: UART, SPI, I2C, MQTT, CAN \\
 \textbf{GUI / Tools}: TouchGFX, LVGL, Fusion 360, PrusaSlicer \\
 \textbf{Other}: Buildroot, ARM Cortex-M/A, GNU Make, PID Control, Kalman Filter
@@ -103,12 +101,11 @@
 %-----------EDUCATION-----------
 \section{Education}
 \resumeSubHeadingListStart
+
   \resumeSubheading
     {G. B. Pant University of Agriculture and Technology}{2027}
-    {B.Tech Final year, Electronics and Communication Engineering}{Pantnagar, Uttarakhand}
-    % \resumeItemListStart
-    %   \resumeItem{Member of The Robotics Club and Vimarsh: The Oratory Club}
-    % \resumeItemListEnd
+    {B.Tech Final Year, Electronics and Communication Engineering}{Pantnagar, Uttarakhand}
+
 \resumeSubHeadingListEnd
 
 %-----------EXPERIENCE-----------
@@ -116,31 +113,43 @@
 \resumeSubHeadingListStart
 
   \resumeSubheading
-    {Embedded Intern}{July 2025 -- September 2025}
-    {\textbf{Sunfox - }\href{https://github.com/KAVATER/Sunfox-Projects/tree/main/HeartRate\%20and\%20Spo2-2/Core/Src}{GitHub Link}}{Dehradun, Uttarakhand}
+    {Embedded Software Intern}{July 2026 -- September 2026}
+    {\textbf{Sunfox - }\href{https://github.com/KAVATER/SUNFOX-2026-Projects}{\textbf{GitHub Link}}}
+    {Dehradun, Uttarakhand}
+
+    \resumeItemListStart
+      \resumeItem{Designed an FIR filter in MATLAB and deployed it with ARM CMSIS-DSP, using FFT-based processing for ECG signal data and filter coefficients.\href{https://github.com/KAVATER/SUNFOX-2026-Projects} {\textbf{GitHub Link}}}
+      \resumeItem{Developed Zephyr RTOS firmware for an nRF52840-based ECG device, increasing the sampling rate from 100 SPS to 600 SPS (6X) by enabling Bluetooth LE 2M PHY and optimizing the codebase.}
+      \resumeItem{Implemented real-time ECG waveform rendering on a 2.4-inch TFT display using 8-bit fonts and a sliding-window graph mapped from display pixels to a circular buffer for low-flicker visualization.}
+      \resumeItem{Configured the STM32WB55 as a BLE Central using the STM32 Wireless SDK, enabling device scanning, connection establishment, and command-triggered GATT notifications.}
+      \resumeItem{Configured the STM32WB55 as a BLE Peripheral with multi-device connectivity for simultaneous ECG data transmission and GATT notifications.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+  \resumeSubheading
+    {  Embedded Intern}{July 2025 -- September 2025}
+    {\textbf{Sunfox - }\href{https://github.com/KAVATER/Sunfox-Projects/tree/main/HeartRate\%20and\%20Spo2-2/Core/Src}{GitHub Link}}
+    {Dehradun, Uttarakhand}
+
     \resumeItemListStart
       \resumeItem{Developed AFE4490 breakout-board drivers and algorithms for SpO2 and heart-rate monitoring.}
       \resumeItem{Applied FIR high-pass filters to remove baseline drift from the SpO2 signal.}
       \resumeItem{Built a custom USB protocol analyzer as a cost-effective alternative to commercial tools.}
-      \resumeItem{Enforced a Kalman filter for MPU6050 and analyzed the effect of motion on SpO2 signals using the Discovery Board accelerometer.}
+      \resumeItem{Implemented a Kalman filter for MPU6050 and analyzed the effect of motion on SpO2 signals using the Discovery Board accelerometer.}
     \resumeItemListEnd
 
-\resumeSubHeadingListEnd
-\resumeSubHeadingListStart
-
-\resumeSubheading
-{Embedded Software Intern}}{}{}
 
 %-----------PROJECTS-----------
 \section{Projects}
 \resumeSubHeadingListStart
 
   \resumeProjectHeading
-    {\textbf{Drone Firmware -  }\href{https://github.com/lab685/ESP32-Drone}{GitHub Link}}{2025}
+    {\textbf{Drone Firmware - }\href{https://github.com/lab685/ESP32-Drone}{GitHub Link}}{2025}
     \resumeItemListStart
       \resumeItem{Built an ESP32-based flight controller using the Arduino framework.}
-      \resumeItem{Enforced a real-time PID controller with an MPU6050 IMU over I2C.}
-      \resumeItem{Executed a Kalman filter for improved motion estimation.}
+      \resumeItem{Implemented a real-time PID controller with an MPU6050 IMU over I2C.}
+      \resumeItem{Implemented a Kalman filter for improved motion estimation.}
     \resumeItemListEnd
 
   \vspace{-2pt}
@@ -159,7 +168,7 @@
     {\textbf{Battle Bot} | Fusion 360, PrusaSlicer, Pico SDK}{2026}
     \resumeItemListStart
       \resumeItem{Designed and developed a 3D-printed battle bot using Fusion 360 and fabricated components using the Prusa MK4 3D printer.}
-      \resumeItem{Developed firmware using the Pico SDK, decoded FlySky transmitter inputs, and enforced watchdog-based fail-safe mechanisms for reliable operation.}
+      \resumeItem{Developed firmware using the Pico SDK, decoded FlySky transmitter inputs, and implemented watchdog-based fail-safe mechanisms for reliable operation.}
     \resumeItemListEnd
 
 \resumeSubHeadingListEnd
@@ -176,11 +185,11 @@
       \resumeItem{Mentored and supervised bot-building competitions.}
     \resumeItemListEnd
 
-    \resumeSubheading
+  \resumeSubheading
     {Member}{}
-    {Vimarsh:The Oratory Club, Pantnagar}{}
+    {Vimarsh: The Oratory Club, Pantnagar}{}
     \resumeItemListStart
-    \resumeItem{Organized and took part in multiple University level debate competitions.}
+      \resumeItem{Organized and participated in multiple university-level debate competitions.}
     \resumeItemListEnd
 
 \resumeSubHeadingListEnd
@@ -194,7 +203,8 @@
 Secured 3rd place in the Beetleweight category at the Robo War competition organized by IIT BHU.
 }
 
-\vspace{- 5pt}
+\vspace{-5pt}
+
 \item{
 \textbf{Runner-Up, Maze Solving Competition} \hfill 2024\\
 Secured 2nd place in the maze-solving event organized by The Robotics Club, Pantnagar during first year.
